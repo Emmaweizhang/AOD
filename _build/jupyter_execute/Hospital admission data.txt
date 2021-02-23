@@ -1,0 +1,19 @@
+# <span style = 'color: #00adee'> Hospital Admission Data
+
+Information on alcohol and drug-related hospital admissions are obtained from the Victorian Admitted Episodes Dataset (VAED).
+
+import numpy as np
+import pandas as pd
+vaed_nov = pd.read_csv('C:/Users/Emma.Zhang/OneDrive - Melbourne Primary Care Network/Documents/Needs Assessment/AOD/PHN_2021_Nov/PHN_VAED2021_Nov_20201217.txt', engine = 'python', delimiter='\t')
+vaed_dec = pd.read_csv('C:/Users/Emma.Zhang/OneDrive - Melbourne Primary Care Network/Documents/Needs Assessment/AOD/PHN_2021_Dec/PHN_VAED2021_Dec_20210119.txt', engine = 'python', delimiter='\t')
+VAED_DEC = vaed_dec[vaed_dec['Care_Type'] == '0']
+VAED_NOV = vaed_nov[vaed_nov['Care_Type'] == '0']
+lga = pd.read_csv('C:/Users/Emma.Zhang/OneDrive - Melbourne Primary Care Network/Documents/Needs Assessment/AOD/AOD JB/12160_Local_Government_Area_Structure.csv')
+
+Episodes care type is "Alcohol and drug' program
+
+VAED_NOV
+
+```[note]
+Incomplete data?
+```
